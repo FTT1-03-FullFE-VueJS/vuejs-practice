@@ -1,5 +1,6 @@
 <template>
-  <p>{{ props.index }}. {{ props.content }}</p>
+  <p>{{ props.index }}. {{ props.content.title }}</p>
+  <p>{{ props.content.description }}</p>
 </template>
 
 <script setup>
@@ -11,7 +12,7 @@ const props = defineProps({
     required: true,
   },
   content: {
-    type: String,
+    type: Object,
     required: true,
   }
 })
